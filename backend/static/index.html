@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LCARS — MYTECHBOOKSWIZZARD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+</head>
+<body>
+
+  <div class="lcars-layout" id="lcars-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="lcars-sidebar" id="lcars-sidebar">
+
+      <!-- Elbow top cap -->
+      <div class="lcars-elbow-top">
+        <div class="elbow-cap"></div>
+        <div class="elbow-horizontal-top"></div>
+      </div>
+
+      <!-- Sidebar body -->
+      <div class="lcars-sidebar-body">
+
+        <div class="sidebar-label">COMPUTER CORE</div>
+
+        <!-- Status indicator -->
+        <div class="lcars-panel sidebar-status-panel">
+          <div class="lcars-panel-label">SYSTEM STATUS</div>
+          <div class="status-online-row">
+            <span class="status-dot" id="status-dot"></span>
+            <span class="status-online-text">ONLINE</span>
+          </div>
+          <div id="status-box" class="status-box"></div>
+          <button id="btn-reindex" class="lcars-btn-sm">REINDEX</button>
+        </div>
+
+        <!-- Divider band -->
+        <div class="lcars-band-row">
+          <div class="band band-orange"></div>
+          <div class="band band-tan"></div>
+          <div class="band band-blue"></div>
+        </div>
+
+        <!-- Warp core animation -->
+        <div class="warp-core-panel">
+          <div class="sidebar-label small">WARP CORE</div>
+          <div class="warp-core-bar">
+            <div class="warp-segment" style="--delay:0s"></div>
+            <div class="warp-segment" style="--delay:0.15s"></div>
+            <div class="warp-segment" style="--delay:0.3s"></div>
+            <div class="warp-segment" style="--delay:0.45s"></div>
+            <div class="warp-segment" style="--delay:0.6s"></div>
+            <div class="warp-segment" style="--delay:0.75s"></div>
+            <div class="warp-segment" style="--delay:0.9s"></div>
+            <div class="warp-segment" style="--delay:1.05s"></div>
+          </div>
+        </div>
+
+        <!-- Divider band -->
+        <div class="lcars-band-row">
+          <div class="band band-purple"></div>
+          <div class="band band-red"></div>
+        </div>
+
+        <!-- Indexed docs -->
+        <div class="lcars-panel sidebar-docs-panel">
+          <div class="lcars-panel-label">INDEXED DOCUMENTS</div>
+          <ul id="doc-list" class="doc-list"></ul>
+        </div>
+
+      </div>
+
+      <!-- Elbow bottom cap -->
+      <div class="lcars-elbow-bottom">
+        <div class="elbow-horizontal-bottom"></div>
+        <div class="elbow-cap-bottom"></div>
+      </div>
+
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="lcars-main">
+
+      <!-- Top header bar -->
+      <header class="lcars-header" id="lcars-header">
+        <div class="lcars-header-left-cap"></div>
+        <div class="lcars-header-title">
+          <span class="header-system">LCARS</span>
+          <span class="header-sep">—</span>
+          <span class="header-name">MYTECHBOOKSWIZZARD</span>
+        </div>
+        <div class="header-stardate">
+          <span class="stardate-label">STARDATE</span>
+          <span class="stardate-value" id="stardate-value"></span>
+        </div>
+        <div class="header-controls">
+          <div class="lcars-toggle-group">
+            <span class="toggle-label-text">WEB SEARCH</span>
+            <label class="lcars-toggle">
+              <input type="checkbox" id="chk-web" />
+              <span class="lcars-toggle-track">
+                <span class="lcars-toggle-thumb"></span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="lcars-header-right-cap"></div>
+      </header>
+
+      <!-- Sub-header band -->
+      <div class="lcars-subheader-band">
+        <div class="subband subband-orange"></div>
+        <div class="subband subband-tan"></div>
+        <div class="subband subband-purple"></div>
+        <div class="subband subband-blue"></div>
+      </div>
+
+      <!-- Chat messages area -->
+      <div id="messages" class="messages"></div>
+
+      <!-- Scanning loader bar -->
+      <div class="lcars-scan-bar" id="scan-bar" aria-hidden="true">
+        <div class="scan-track">
+          <div class="scan-sweep" id="scan-sweep"></div>
+        </div>
+        <span class="scan-label">PROCESSING QUERY</span>
+      </div>
+
+      <!-- Input panel -->
+      <div class="lcars-input-panel">
+        <div class="input-panel-band"></div>
+        <div class="input-row">
+          <div class="input-left-block"></div>
+          <textarea
+            id="input"
+            class="input-box"
+            rows="2"
+            placeholder="INPUT QUERY… ENTER TO TRANSMIT / SHIFT+ENTER FOR NEW LINE"
+            aria-label="Chat input"
+          ></textarea>
+          <button id="btn-send" class="btn-send" aria-label="Send message">
+            <span class="btn-send-text">TRANSMIT</span>
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

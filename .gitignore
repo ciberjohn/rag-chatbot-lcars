@@ -1,0 +1,8 @@
+.env
+data/
+docs/
+*.pyc
+__pycache__/
+.model_cache/
+*.log
+rclone.conf
