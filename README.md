@@ -4,7 +4,7 @@ A RAG (Retrieval-Augmented Generation) chatbot that indexes your local document 
 
 Built as a weekend project and documented in this Article https://medium.com/@joaolealdasilva/i-vibe-coded-a-rag-chatbot-with-claude-code-this-weekend-heres-the-honest-account-0806b74db8b8
 
-![LCARS Interface](docs-placeholder/lcars-screenshot.png)
+![LCARS Interface](https://miro.medium.com/v2/resize:fit:720/format:webp/1*5xieqRNANbhvJvEJPCnAMQ.png)
 
 ## What It Does
 
