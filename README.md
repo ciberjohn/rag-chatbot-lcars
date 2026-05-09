@@ -2,7 +2,7 @@
 
 A RAG (Retrieval-Augmented Generation) chatbot that indexes your local document library and lets you chat with it via a Star Trek LCARS-themed interface, powered by Claude Haiku.
 
-Built as a weekend project and documented in this [Medium article](#).
+Built as a weekend project and documented in this Article https://medium.com/@joaolealdasilva/i-vibe-coded-a-rag-chatbot-with-claude-code-this-weekend-heres-the-honest-account-0806b74db8b8
 
 ![LCARS Interface](docs-placeholder/lcars-screenshot.png)
 
